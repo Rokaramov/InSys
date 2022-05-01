@@ -5,47 +5,42 @@
 <head>
 <meta charset="UTF-8">
 <title>Ипотечный калькулятор</title>
+
+<link rel="stylesheet" href="css/NewFile.css">
+
 </head>
 <body>
 	<form action="${pageContext.request.contextPath}/Calc" method="post">
 		<H1>Добро пожаловать в ипотечный калькулятор!</H1>
 		<H1>Введите все необходимые данные и нажмите "рассчитать"</H1>
 			<label for="first">Введите стоимость недвижимости</label>
-			<input type="text" name="first" id="first" value="${summa}">
+			<input type="text" name="first" id="first" value="${first}">
 			<label>Рублей</label>
 			<br>
 			<br>
 			<br>
-			<!--  <label for="second">Выберите процентную ставку</label>
-			<input type="text" name="second" id="second" value="${percent}">
-			<label>%</label>-->
-			<label for="stavka">Выберите процентную ставку</label>
-			<select name="stavka">
-				<option value="stavka1">Процент%</option>
-				<option value="stavka2">Процент%</option>
-				<option value="stavka3">Процент%</option>
+			<label for="second">Выберите процентную ставку</label>
+			<select id="second" name="second">
+				<option value="10">10</option>
+				<option value="15">15</option>
+				<option value="20">20</option>
 			</select>
-			<!--  <label for="stavka">Процентная ставка</label>
-			 <select name="stavka">
-			 	<option value ="percent1">12%</option>
-			 	 
-			 
-			 </select>-->
+			<label>%</label>
 			<br>
 			<br>
 			<br>
 			<label for="third">Введите срок кредитования</label>
-			<input type="text" name="third" id="third" value="${srok}">
+			<input type="text" name="third" id="third" value="${third}">
 			<label>Полных лет</label>
 			<br>
 			<br>
 			<br>
-			<label for="forth">Введите ваш первоначальный взнос</label>
-			<input type="text" name="forth" id="forth" value="${vznos}">
+			<label for="fourth">Введите ваш первоначальный взнос</label>
+			<input type="text" name="fourth" id="fourth" value="${fourth}">
 			<label>Рублей</label>
 			<br>
 			<br>
-			<input type="submit" name="schet" value="Рассчитать">	
+			<input type="submit" name="sign" value="Рассчитать">	
 	</form>
 	<br>
 	<form action="${pageContext.request.contextPath}/Info.jsp" method="post">

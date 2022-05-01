@@ -5,6 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Регистрация</title>
+
+<link rel="stylesheet" href="css/NewFile.css">
+
 </head>
 <body>
 <form action="${pageContext.request.contextPath}/Avtoriz.jsp" method="post">

@@ -5,6 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Авторизация</title>
+
+<link rel="stylesheet" href="css/NewFile.css">
+
 </head>
 <body>
           <form action="${pageContext.request.contextPath}/Glav.jsp" method="post">

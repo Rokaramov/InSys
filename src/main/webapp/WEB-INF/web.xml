@@ -6,7 +6,7 @@
   </welcome-file-list>
 <servlet>
 	<servlet-name>Calc</servlet-name>
-	<servlet-class>main.Calc</servlet-class>
+	<servlet-class>packCalc.Calc</servlet-class>
 </servlet>
   <servlet-mapping>
   <servlet-name>Calc</servlet-name>
