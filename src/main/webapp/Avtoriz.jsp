@@ -10,16 +10,17 @@
 
 </head>
 <body>
-          <form action="${pageContext.request.contextPath}/Glav.jsp" method="post">
-			<input type="text" name="login" id="login" placeholder="Логин">
+          <form action="${pageContext.request.contextPath}/Avtor" method="post">
+			<input type="text" name="log" id="log" placeholder="Логин" value="${log}">
 			<br>
 			<br>
-			<input type="password" name="psw" id="psw" placeholder="Пароль">
+			<input type="password" name="pass" id="pass" placeholder="Пароль" value="${pass}">
 			<br>
 			<br>
 			<input type="submit" name="signin" value="Войти">
 		  </form>
 			<br>	
+			
 	       <form action="${pageContext.request.contextPath}/Registr.jsp" method="post">		
 			<input type="submit" name="signup" value="Зарегистрироваться">
 	        </form>
