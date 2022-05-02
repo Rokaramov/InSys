@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Ипотечный калькулятор</title>
 
-<link rel="stylesheet" href="css/NewFile.css">
+<link rel="stylesheet" href="css/Glav.css">
 
 </head>
 <body>

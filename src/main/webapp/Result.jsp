@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Результат</title>
 
-<link rel="stylesheet" href="css/NewFile.css">
+<link rel="stylesheet" href="css/Beb.css">
 
 </head>
 <body>
