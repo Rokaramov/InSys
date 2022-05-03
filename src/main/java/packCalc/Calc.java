@@ -16,7 +16,7 @@ public class Calc extends HttpServlet{
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributesAndCalculate(request);
 		
-		request.getRequestDispatcher("/Result.jsp").forward(request, response);
+		request.getRequestDispatcher("/Glav.jsp").forward(request, response);
 	}
 	
 	private static class RequestCalc {
@@ -79,7 +79,10 @@ public class Calc extends HttpServlet{
 				fourth_try=0;
 			}
 			DecimalFormat df = new DecimalFormat("###.##");
-			result=((first_try - fourth_try) * (second_try/12)) / (1 - Math.pow(1 + (second_try/12), -(third_try*12)));
+			Out out = new Out(first_try,second_try,third_try,fourth_try);
+			Abst abst;
+			abst=out;
+			result=abst.calc();
 			result2=first_try;
 			result3=second_try*100;
 			result4=third_try;

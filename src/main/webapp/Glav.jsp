@@ -40,6 +40,9 @@
 			<label>Рублей</label>
 			<br>
 			<br>
+		    <br>
+			<label><strong>Сумма ежемесячного платежа составит:</strong> ${result}</label> <label> Рублей</label>
+			<br>
 			<input type="submit" name="sign" value="Рассчитать">	
 	</form>
 	<br>
