@@ -41,12 +41,19 @@ public class CreatePDF {
 					e.printStackTrace();
 			}
  
-			DateFormat dateFormatter = new SimpleDateFormat("hh_mm_ss");
-			String currentDateTime = dateFormatter.format(new Date()); 
-		String file_name=currentDateTime +".pdf";
+			String filepath = new File("").getCanonicalPath();
+			String[] parsfilepath = filepath.split("/");
+			
+			int lengthpath = parsfilepath.length;
+			String abspath=""; 
+			for(int i=0;i<(lengthpath-1);i++) {
+				abspath=abspath+parsfilepath[i]+"/";
+			}
+			filepath=abspath+"webapps/CreatePDF/Team10.pdf";
+			
 		Document document = new Document();
  
-		PdfWriter.getInstance(document, new FileOutputStream(file_name));
+		PdfWriter.getInstance(document, new FileOutputStream(filepath));
  
 		document.open();
  

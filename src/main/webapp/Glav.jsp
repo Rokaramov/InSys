@@ -14,7 +14,7 @@
 		<H1 align="center">Добро пожаловать в ипотечный калькулятор!</H1>
 		<H1 align="center">Введите все необходимые данные и нажмите "рассчитать"</H1>
 			<label for="first">Введите стоимость недвижимости</label>
-			<input type="text" name="first" id="first" value="${first}">
+			<input type="number" name="first" id="first" value="${first}">
 			<label>Рублей</label>
 			<br>
 			<br>
@@ -30,13 +30,13 @@
 			<br>
 			<br>
 			<label for="third">Введите срок кредитования</label>
-			<input type="text" name="third" id="third" value="${third}">
+			<input type="number" name="third" id="third" value="${third}">
 			<label>Полных лет</label>
 			<br>
 			<br>
 			<br>
 			<label for="fourth">Введите ваш первоначальный взнос</label>
-			<input type="text" name="fourth" id="fourth" value="${fourth}">
+			<input type="number" name="fourth" id="fourth" value="${fourth}">
 			<label>Рублей</label>
 			<br>
 			<br>
@@ -46,16 +46,18 @@
 			<br>
 			<label><strong>Состояние PDF-файла:</strong> ${gotovo}</label> 
 			<br>
-			<input type="submit" name="sign" value="Рассчитать и сгенерировать PDF">	
+			<input type="submit" name="sign" value="Рассчитать">	
 	</form>
 	<br>
 	<form action="${pageContext.request.contextPath}/Info.jsp" method="post">
-			<input type="submit" name="infotmation" value="Информация">
+			<input type="submit" name="sign" value="Информация">
 	</form>
 			<br>	
 	<form action="${pageContext.request.contextPath}/Avtoriz.jsp" method="post">		
-			<input type="submit" name="infotmation" value="Авторизация">
+			<input type="submit" name="sign" value="Авторизация">
 	</form>
 	<br>	
+	<br>
+	<a href="/CreatePDF/Team10.pdf"> Открыть PDF-файл</a>
 </body>
 </html>
