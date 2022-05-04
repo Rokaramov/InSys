@@ -1,12 +1,13 @@
 package packCalc;
 
 import java.io.IOException;
+
 import java.text.DecimalFormat;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import packPdf.CreatePDF;
 
 @WebServlet(name="Calc", urlPatterns="/Calc")
@@ -79,10 +80,14 @@ public class Calc extends HttpServlet{
 			DecimalFormat df = new DecimalFormat("###.##");
 			Out out = new Out(first_try,second_try,third_try,fourth_try);
 			Abst abst;
+			new PercentChange();
 			abst=out;
 			result=abst.calc();
 			new CreatePDF(first_try, second_try, third_try, fourth_try, result);
 			request.setAttribute("result", df.format(result));
+			request.setAttribute("firstGlavPercent", df.format(PercentChange.changePercent1));
+			request.setAttribute("secondGlavPercent", df.format(PercentChange.changePercent2));
+			request.setAttribute("thirdGlavPercent", df.format(PercentChange.changePercent3));
 			request.setAttribute("gotovo", gotov);
 		}
 	}

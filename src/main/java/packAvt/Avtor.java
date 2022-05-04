@@ -1,13 +1,16 @@
 package packAvt;
 
 import java.io.FileReader;
+
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.Scanner;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import packCalc.PercentChange;
 
 @WebServlet(name="Avtor", urlPatterns="/Avtor")
 
@@ -56,6 +59,11 @@ return new RequestAvtor(request.getParameter("log"), request.getParameter("pass"
 					password = scan.nextLine();
 					administrator = adScan.nextLine();
 	if(loginJava.contentEquals(login) && passwordJava.contentEquals(password) && zero.contentEquals(administrator)) {
+		DecimalFormat df = new DecimalFormat("###.##");
+		new PercentChange();
+		request.setAttribute("firstGlavPercent", df.format(PercentChange.changePercent1));
+		request.setAttribute("secondGlavPercent", df.format(PercentChange.changePercent2));
+		request.setAttribute("thirdGlavPercent", df.format(PercentChange.changePercent3));
 						che = true;
 						request.getRequestDispatcher("/Glav.jsp").forward(request, response);
 	} 
@@ -63,8 +71,8 @@ return new RequestAvtor(request.getParameter("log"), request.getParameter("pass"
 						che = true;
 						adminCheck = true;
 						request.getRequestDispatcher("/GlavAdm.jsp").forward(request, response);
-								}		 
-										 												}
+	}		 
+				}
 				sc.close();
 				scan.close();
 				adScan.close();
@@ -72,7 +80,6 @@ return new RequestAvtor(request.getParameter("log"), request.getParameter("pass"
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
 											 }			
-			
 					if(!che) {
 						request.getRequestDispatcher("/Avtoriz.jsp").forward(request, response);
 					}
