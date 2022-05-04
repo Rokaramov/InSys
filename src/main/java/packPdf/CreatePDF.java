@@ -34,8 +34,8 @@ public class CreatePDF {
 			for(int i=0;i<(lengthpath-1);i++) {
 				abspath=abspath+parsfilepath[i]+"/";
 			}
-			filepath=abspath+"webapps/Team10/Team10.pdf";
-			String fontpath =abspath+"webapps/Team10/fonts/times.ttf";
+			filepath=abspath+"webapps/Kursovaya/Team10.pdf";
+			String fontpath = abspath+"webapps/Kursovaya/fonts/times.ttf";
 			
 					BaseFont times = null;
 			try {
