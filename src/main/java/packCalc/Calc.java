@@ -26,7 +26,7 @@ public class Calc extends HttpServlet{
 		private final String second_calc;
 		private final String third_calc;
 		private final String fourth_calc;
-		private String gotov = "сгенерирован";
+		private String gotov = "OK";
 		private double result;
 		
 		private RequestCalc (String first, String second, String third, String fourth) {
