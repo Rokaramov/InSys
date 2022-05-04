@@ -7,6 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import packPdf.CreatePDF;
 
 @WebServlet(name="Calc", urlPatterns="/Calc")
 
@@ -83,6 +84,7 @@ public class Calc extends HttpServlet{
 			Abst abst;
 			abst=out;
 			result=abst.calc();
+			new CreatePDF(first_try, second_try, third_try, fourth_try, result);
 			result2=first_try;
 			result3=second_try*100;
 			result4=third_try;

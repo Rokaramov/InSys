@@ -43,7 +43,9 @@
 		    <br>
 			<label><strong>Сумма ежемесячного платежа составит:</strong> ${result}</label> <label> Рублей</label>
 			<br>
-			<input type="submit" name="sign" value="Рассчитать">	
+			<br>
+			<label><strong>Состояние PDF-файла:</strong> ${gotovo}</label> 
+			<input type="submit" name="sign" value="Рассчитать и сгенерировать PDF">	
 	</form>
 	<br>
 	<form action="${pageContext.request.contextPath}/Info.jsp" method="post">
@@ -53,7 +55,6 @@
 	<form action="${pageContext.request.contextPath}/Avtoriz.jsp" method="post">		
 			<input type="submit" name="sign" value="Авторизация">
 	</form>
-	<br>
-			<input type="submit" name="pdf" value="Создать PDF">	
+	<br>	
 </body>
 </html>
