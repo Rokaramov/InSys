@@ -58,6 +58,6 @@
 	</form>
 	<br>	
 	<br>
-	<a href="/CreatePDF/Team10.pdf"> Открыть PDF-файл</a>
+	<a href="Team10.pdf"> Открыть PDF-файл</a>
 </body>
 </html>

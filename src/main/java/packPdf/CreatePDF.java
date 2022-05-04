@@ -33,7 +33,7 @@ public class CreatePDF {
 					e.printStackTrace();
 			}
  
-			String filepath = new File("").getCanonicalPath();
+			/*String filepath = new File("").getCanonicalPath();
 			String[] parsfilepath = filepath.split("/");
 			
 			int lengthpath = parsfilepath.length;
@@ -41,11 +41,11 @@ public class CreatePDF {
 			for(int i=0;i<(lengthpath-1);i++) {
 				abspath=abspath+parsfilepath[i]+"/";
 			}
-			filepath=abspath+"webapps/CreatePDF/Team10.pdf";
+			filepath=abspath+"webapps/CreatePDF/Team10.pdf";*/
 			
 		Document document = new Document();
  
-		PdfWriter.getInstance(document, new FileOutputStream(filepath));
+		PdfWriter.getInstance(document, new FileOutputStream(/*filepath*/"Team10.pdf"));
  
 		document.open();
  
