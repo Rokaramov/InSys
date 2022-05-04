@@ -16,7 +16,20 @@ h1 {
   text-align: justify; 
 }
 
-input[type="submit"] {	
+input[name="sign"] {	
+  position: relative;
+  top: 15px;
+  left: 275px;
+  color: #fff; 
+  width: 280px;
+  height: 40px;
+  user-select: none; 
+  background: #a52a2a;
+  padding: .7em 1.5em; 
+  font-family: 'Roboto Medium', sans-serif;
+}
+
+input[name="infotmation"] {	
   position: relative;
   top: 15px;
   left: 275px;

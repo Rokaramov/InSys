@@ -25,11 +25,8 @@ public class Calc extends HttpServlet{
 		private final String second_calc;
 		private final String third_calc;
 		private final String fourth_calc;
+		private String gotov = "сгенерирован";
 		private double result;
-		private double result2;
-		private double result3;
-		private double result4;
-		private double result5;
 		
 		private RequestCalc (String first, String second, String third, String fourth) {
 			this.first_calc = first;
@@ -85,15 +82,8 @@ public class Calc extends HttpServlet{
 			abst=out;
 			result=abst.calc();
 			new CreatePDF(first_try, second_try, third_try, fourth_try, result);
-			result2=first_try;
-			result3=second_try*100;
-			result4=third_try;
-			result5=fourth_try;
 			request.setAttribute("result", df.format(result));
-			request.setAttribute("result2", result2);
-			request.setAttribute("result3", result3);
-			request.setAttribute("result4", result4);
-			request.setAttribute("result5", result5);
+			request.setAttribute("gotovo", gotov);
 		}
 	}
 }

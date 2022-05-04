@@ -11,8 +11,8 @@
 </head>
 <body>
 	<form action="${pageContext.request.contextPath}/Calc" method="post">
-		<H1>Добро пожаловать в ипотечный калькулятор!</H1>
-		<H1>Введите все необходимые данные и нажмите "рассчитать"</H1>
+		<H1 align="center">Добро пожаловать в ипотечный калькулятор!</H1>
+		<H1 align="center">Введите все необходимые данные и нажмите "рассчитать"</H1>
 			<label for="first">Введите стоимость недвижимости</label>
 			<input type="text" name="first" id="first" value="${first}">
 			<label>Рублей</label>
@@ -45,6 +45,7 @@
 			<br>
 			<br>
 			<label><strong>Состояние PDF-файла:</strong> ${gotovo}</label> 
+			<br>
 			<input type="submit" name="sign" value="Рассчитать и сгенерировать PDF">	
 	</form>
 	<br>
@@ -53,7 +54,7 @@
 	</form>
 			<br>	
 	<form action="${pageContext.request.contextPath}/Avtoriz.jsp" method="post">		
-			<input type="submit" name="sign" value="Авторизация">
+			<input type="submit" name="infotmation" value="Авторизация">
 	</form>
 	<br>	
 </body>
