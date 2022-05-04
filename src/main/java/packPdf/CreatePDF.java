@@ -41,7 +41,7 @@ public class CreatePDF {
 			for(int i=0;i<(lengthpath-1);i++) {
 				abspath=abspath+parsfilepath[i]+"/";
 			}
-			filepath=abspath+"webapps/CreatePDF/Team10.pdf";
+			filepath=abspath+"webapps/Kursovaya/Team10.pdf";
 			
 		Document document = new Document();
  
