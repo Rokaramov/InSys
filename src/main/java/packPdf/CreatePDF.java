@@ -22,16 +22,9 @@ public class CreatePDF {
 	public CreatePDF(Double x1, Double x2, Double x3, Double x4, Double x5) {
 		 
 		try {
-			String fontpath = "/fonts/times.ttf";
-			BaseFont times = null;
-			try {
-					times = BaseFont.createFont(fontpath, "cp1251", BaseFont.EMBEDDED);
-				} catch (DocumentException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IOException e) {
-					e.printStackTrace();
-			}
+			//String fontpath = "/fonts/times.ttf";
+			
+			
  
 			String filepath = new File("").getCanonicalPath();
 			String[] parsfilepath = filepath.split("/");
@@ -41,7 +34,18 @@ public class CreatePDF {
 			for(int i=0;i<(lengthpath-1);i++) {
 				abspath=abspath+parsfilepath[i]+"/";
 			}
-			filepath=abspath+"webapps/Kursovaya/Team10.pdf";
+			filepath=abspath+"webapps/Team10/Team10.pdf";
+			String fontpath =abspath+"webapps/Team10/fonts/times.ttf";
+			
+					BaseFont times = null;
+			try {
+					times = BaseFont.createFont(fontpath, "cp1251", BaseFont.EMBEDDED);
+				} catch (DocumentException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+			}
 			
 		Document document = new Document();
  
