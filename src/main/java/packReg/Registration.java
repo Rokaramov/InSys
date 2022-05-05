@@ -66,7 +66,7 @@ return new RequestRegistration(request.getParameter("loginReg"), request.getPara
 				request.setAttribute("pass", passwordJava);
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
-				request.setAttribute("log", "Регистрация не совершена");		
+				request.setAttribute("log", "Р РµРіРёСЃС‚СЂР°С†РёСЏ РЅРµ СЃРѕРІРµСЂС€РµРЅР°");		
 				}	
 		}
 	}
