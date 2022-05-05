@@ -81,7 +81,7 @@ return new RequestAvtor(request.getParameter("log"), request.getParameter("pass"
 						e1.printStackTrace();
 											 }			
 					if(!che) {
-						request.getRequestDispatcher("/Avtoriz.jsp").forward(request, response);
+						request.getRequestDispatcher("/Avtoriz.jsp");
 					}
 	}
 }
