@@ -99,7 +99,7 @@ public class CreatePDF {
 		c1 = new PdfPCell(new Phrase("v",  new Font(times,14)));
 		table.addCell(c1);
 		table.addCell(df2.format(x4));
-		c1 = new PdfPCell(new Phrase("Ó",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("v",  new Font(times,14)));
 		table.addCell(c1);
  
 		c1 = new PdfPCell(new Phrase("v:",  new Font(times,14)));
