@@ -51,17 +51,17 @@ public class CreatePDF {
  
 		DecimalFormat df2 = new DecimalFormat("###.##");
  
-		Paragraph mainPara = new Paragraph("À:");
+		Paragraph mainPara = new Paragraph("a:");
 		mainPara.setAlignment(Paragraph.ALIGN_CENTER);
-		Paragraph para1 = new Paragraph("Á " + x1 + " Â",  new Font(times,14));
+		Paragraph para1 = new Paragraph("b " + x1 + "c",  new Font(times,14));
 		para1.setAlignment(Paragraph.ALIGN_CENTER);
-		Paragraph para2 = new Paragraph("Â " + df2.format(x2 * 100) + " Ã",  new Font(times,14));
+		Paragraph para2 = new Paragraph("d" + df2.format(x2 * 100) + "e",  new Font(times,14));
 		para2.setAlignment(Paragraph.ALIGN_CENTER);
-		Paragraph para3 = new Paragraph("Ä " + df2.format(x3 / 12) + " Å",  new Font(times,14));
+		Paragraph para3 = new Paragraph("s " + df2.format(x3 / 12) + "f",  new Font(times,14));
 		para3.setAlignment(Paragraph.ALIGN_CENTER);
-		Paragraph para4 = new Paragraph("Æ " + df2.format(x4) + " Ç",  new Font(times,14));
+		Paragraph para4 = new Paragraph("v " + df2.format(x4) + "v",  new Font(times,14));
 		para4.setAlignment(Paragraph.ALIGN_CENTER);
-		Paragraph para5 = new Paragraph("È: " + df2.format(x5) + " Ê",  new Font(times,14));
+		Paragraph para5 = new Paragraph("v" + df2.format(x5) + "v",  new Font(times,14));
 		para5.setAlignment(Paragraph.ALIGN_CENTER);
 		Paragraph para6 = new Paragraph(" ");
 		para6.setAlignment(Paragraph.ALIGN_CENTER);
@@ -75,37 +75,37 @@ public class CreatePDF {
 		document.add(para6);
  
 		PdfPTable table = new PdfPTable(3);
-		PdfPCell c1 = new PdfPCell(new Phrase("Ë:",  new Font(times,14)));
+		PdfPCell c1 = new PdfPCell(new Phrase("v",  new Font(times,14)));
 		table.addCell(c1); 
  
 		c1 = new PdfPCell(new Phrase(df2.format(x1),  new Font(times,14)));
 		table.addCell(c1);
  
-		c1 = new PdfPCell(new Phrase("È",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("v",  new Font(times,14)));
 		table.addCell(c1);
  
-		c1 = new PdfPCell(new Phrase("Ì:",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("v:",  new Font(times,14)));
 		table.addCell(c1);
 		table.addCell(df2.format(x2 * 100));
-		c1 = new PdfPCell(new Phrase("Î",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("v",  new Font(times,14)));
 		table.addCell(c1);
  
-		c1 = new PdfPCell(new Phrase("Ð:",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("v",  new Font(times,14)));
 		table.addCell(c1);
 		table.addCell(df2.format(x3 / 12));
-		c1 = new PdfPCell(new Phrase("Ñ",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("v",  new Font(times,14)));
 		table.addCell(c1);
  
-		c1 = new PdfPCell(new Phrase("Ò",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("v",  new Font(times,14)));
 		table.addCell(c1);
 		table.addCell(df2.format(x4));
 		c1 = new PdfPCell(new Phrase("Ó",  new Font(times,14)));
 		table.addCell(c1);
  
-		c1 = new PdfPCell(new Phrase("ô:",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("v:",  new Font(times,14)));
 		table.addCell(c1);
 		table.addCell(df2.format(x5));
-		c1 = new PdfPCell(new Phrase("à",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("v",  new Font(times,14)));
 		table.addCell(c1);
  
 		document.add(table);

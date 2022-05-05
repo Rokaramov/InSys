@@ -3,6 +3,7 @@ package packAvt;
 import java.io.FileReader;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 import javax.servlet.ServletException;
@@ -17,8 +18,15 @@ import packCalc.PercentChange;
 public class Avtor extends HttpServlet{
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestAvtor Avtor = RequestAvtor.fromRequestParameters(request);
-		Avtor.setAsRequestAttributesAndPaste(request, response);
+		RequestAvtor Avtor;
+		try {
+			Avtor = RequestAvtor.fromRequestParameters(request);
+			Avtor.setAsRequestAttributesAndPaste(request, response);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 		
 	}
@@ -30,12 +38,12 @@ public class Avtor extends HttpServlet{
 		private boolean che = false;
 		private boolean adminCheck = false;
 		
-		private RequestAvtor (String loginReg, String passwordReg) {
-			this.loginJava = loginReg;
-			this.passwordJava = passwordReg;
+		private RequestAvtor (String loginReg, String passwordReg) throws Exception {
+			this.loginJava = new String(loginReg.getBytes("ISO-8859-1"), "utf-8");
+			this.passwordJava = new String(passwordReg.getBytes("ISO-8859-1"), "utf-8");
 		}
 		
-public static RequestAvtor fromRequestParameters(HttpServletRequest request) {
+public static RequestAvtor fromRequestParameters(HttpServletRequest request) throws Exception {
 return new RequestAvtor(request.getParameter("log"), request.getParameter("pass"));
 }
 		

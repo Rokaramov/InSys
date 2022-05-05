@@ -3,6 +3,7 @@ package packReg;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,20 +16,27 @@ import javax.servlet.http.HttpServletResponse;
 public class Registration extends HttpServlet{
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestRegistration Registration = RequestRegistration.fromRequestParameters(request);
-		Registration.setAsRequestAttributesAndPaste(request);
+		RequestRegistration Registration;
+		try {
+			Registration = RequestRegistration.fromRequestParameters(request);
+			Registration.setAsRequestAttributesAndPaste(request);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		request.getRequestDispatcher("/Avtoriz.jsp").forward(request, response);
 	}
 	private static class RequestRegistration {
 		private final String loginJava;
 		private final String passwordJava;
 		
-		private RequestRegistration (String loginReg, String passwordReg) {
-			this.loginJava = loginReg;
-			this.passwordJava = passwordReg;
+		private RequestRegistration (String loginReg, String passwordReg) throws Exception {
+			this.loginJava = new String(loginReg.getBytes("ISO-8859-1"), "utf-8");
+			this.passwordJava = new String(passwordReg.getBytes("ISO-8859-1"), "utf-8");
 		}
 		
-public static RequestRegistration fromRequestParameters(HttpServletRequest request) {
+public static RequestRegistration fromRequestParameters(HttpServletRequest request) throws Exception {
 return new RequestRegistration(request.getParameter("loginReg"), request.getParameter("passwordReg"));
 }
 		
@@ -64,7 +72,7 @@ return new RequestRegistration(request.getParameter("loginReg"), request.getPara
 				request.setAttribute("pass", passwordJava);
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
-				request.setAttribute("log", "Регистрация не совершена");		
+				request.setAttribute("log", "reg");		
 				}	
 		}
 	}
