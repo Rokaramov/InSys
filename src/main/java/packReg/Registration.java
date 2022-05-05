@@ -15,10 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 public class Registration extends HttpServlet{
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setCharacterEncoding("UTF-8");
 		RequestRegistration Registration = RequestRegistration.fromRequestParameters(request);
 		Registration.setAsRequestAttributesAndPaste(request);
-		response.setCharacterEncoding("UTF-8");
 		request.getRequestDispatcher("/Avtoriz.jsp").forward(request, response);
 	}
 	private static class RequestRegistration {

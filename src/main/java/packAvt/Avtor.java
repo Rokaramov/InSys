@@ -17,7 +17,6 @@ import packCalc.PercentChange;
 public class Avtor extends HttpServlet{
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setCharacterEncoding("UTF-8");
 		RequestAvtor Avtor = RequestAvtor.fromRequestParameters(request);
 		Avtor.setAsRequestAttributesAndPaste(request, response);
 		
@@ -43,7 +42,6 @@ return new RequestAvtor(request.getParameter("log"), request.getParameter("pass"
 		public void setAsRequestAttributesAndPaste(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 			try {
-				response.setCharacterEncoding("UTF-8");
 				request.setAttribute("log", loginJava);
 				request.setAttribute("pass", passwordJava);			
 				
@@ -83,7 +81,6 @@ return new RequestAvtor(request.getParameter("log"), request.getParameter("pass"
 						e1.printStackTrace();
 											 }			
 					if(!che) {
-						response.setCharacterEncoding("UTF-8");
 						request.getRequestDispatcher("/Avtoriz.jsp").forward(request, response);
 					}
 	}
