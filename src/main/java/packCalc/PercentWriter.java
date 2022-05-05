@@ -64,7 +64,7 @@ return new RequestRegistration(request.getParameter("firstAdmPercent"), request.
 				request.setAttribute("thirdGlavPercent", thirdPercent);
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
-				request.setAttribute("log", "Р РµРіРёСЃС‚СЂР°С†РёСЏ РЅРµ СЃРѕРІРµСЂС€РµРЅР°");		
+				request.setAttribute("log", "Регистрация не совершена");		
 				}	
 		}
 	}
