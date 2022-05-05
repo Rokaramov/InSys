@@ -59,12 +59,12 @@ return new RequestAvtor(request.getParameter("log"), request.getParameter("pass"
 				Scanner scan = new Scanner(rd);
 				FileReader admi = new FileReader("admin.TXT");
 				Scanner adScan = new Scanner(admi);
-				String login = new String();
-				String password = new String();
+				
+				
 				String administrator = new String();
 				while(sc.hasNextLine() && scan.hasNextLine() && adScan.hasNextLine()) {
-					login = sc.nextLine();
-					password = scan.nextLine();
+					String login = new String(sc.nextLine().getBytes("ISO-8859-1"), "utf-8");
+					String password = new String(scan.nextLine().getBytes("ISO-8859-1"), "utf-8");
 					administrator = adScan.nextLine();
 	if(loginJava.contentEquals(login) && passwordJava.contentEquals(password) && zero.contentEquals(administrator)) {
 		DecimalFormat df = new DecimalFormat("###.##");
