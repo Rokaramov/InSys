@@ -51,17 +51,17 @@ public class CreatePDF {
  
 		DecimalFormat df2 = new DecimalFormat("###.##");
  
-		Paragraph mainPara = new Paragraph("Результаты:",  new Font(times,14));
+		Paragraph mainPara = new Paragraph("Р РµР·СѓР»СЊС‚Р°С‚С‹:",  new Font(times,14));
 		mainPara.setAlignment(Paragraph.ALIGN_CENTER);
-		Paragraph para1 = new Paragraph("Стоимость недвижимости " + x1 + " рублей",  new Font(times,14));
+		Paragraph para1 = new Paragraph("РЎС‚РѕРёРјРѕСЃС‚СЊ РЅРµРґРІРёР¶РёРјРѕСЃС‚Рё " + x1 + " СЂСѓР±Р»РµР№",  new Font(times,14));
 		para1.setAlignment(Paragraph.ALIGN_CENTER);
-		Paragraph para2 = new Paragraph("Процентная ставка " + df2.format(x2 * 100) + " процентов",  new Font(times,14));
+		Paragraph para2 = new Paragraph("РџСЂРѕС†РµРЅС‚РЅР°СЏ СЃС‚Р°РІРєР° " + df2.format(x2 * 100) + " РїСЂРѕС†РµРЅС‚РѕРІ",  new Font(times,14));
 		para2.setAlignment(Paragraph.ALIGN_CENTER);
-		Paragraph para3 = new Paragraph("На " + df2.format(x3 / 12) + " полных лет",  new Font(times,14));
+		Paragraph para3 = new Paragraph("РќР° " + df2.format(x3 / 12) + " РїРѕР»РЅС‹С… Р»РµС‚",  new Font(times,14));
 		para3.setAlignment(Paragraph.ALIGN_CENTER);
-		Paragraph para4 = new Paragraph("С первым взносом " + df2.format(x4) + " рублей",  new Font(times,14));
+		Paragraph para4 = new Paragraph("РЎ РїРµСЂРІС‹Рј РІР·РЅРѕСЃРѕРј " + df2.format(x4) + " СЂСѓР±Р»РµР№",  new Font(times,14));
 		para4.setAlignment(Paragraph.ALIGN_CENTER);
-		Paragraph para5 = new Paragraph("Ежемесячный платёж составит: " + df2.format(x5) + " рублей",  new Font(times,14));
+		Paragraph para5 = new Paragraph("Р•Р¶РµРјРµСЃСЏС‡РЅС‹Р№ РїР»Р°С‚С‘Р¶ СЃРѕСЃС‚Р°РІРёС‚: " + df2.format(x5) + " СЂСѓР±Р»РµР№",  new Font(times,14));
 		para5.setAlignment(Paragraph.ALIGN_CENTER);
 		Paragraph para6 = new Paragraph(" ");
 		para6.setAlignment(Paragraph.ALIGN_CENTER);
@@ -75,37 +75,37 @@ public class CreatePDF {
 		document.add(para6);
  
 		PdfPTable table = new PdfPTable(3);
-		PdfPCell c1 = new PdfPCell(new Phrase("Стоимость недвижимости:",  new Font(times,14)));
+		PdfPCell c1 = new PdfPCell(new Phrase("РЎС‚РѕРёРјРѕСЃС‚СЊ РЅРµРґРІРёР¶РёРјРѕСЃС‚Рё:",  new Font(times,14)));
 		table.addCell(c1); 
  
 		c1 = new PdfPCell(new Phrase(df2.format(x1),  new Font(times,14)));
 		table.addCell(c1);
  
-		c1 = new PdfPCell(new Phrase("рублей",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("СЂСѓР±Р»РµР№",  new Font(times,14)));
 		table.addCell(c1);
  
-		c1 = new PdfPCell(new Phrase("Процентная ставка:",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("РџСЂРѕС†РµРЅС‚РЅР°СЏ СЃС‚Р°РІРєР°:",  new Font(times,14)));
 		table.addCell(c1);
 		table.addCell(df2.format(x2 * 100));
-		c1 = new PdfPCell(new Phrase("процентов",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("РїСЂРѕС†РµРЅС‚РѕРІ",  new Font(times,14)));
 		table.addCell(c1);
  
-		c1 = new PdfPCell(new Phrase("Срок кредитования:",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("РЎСЂРѕРє РєСЂРµРґРёС‚РѕРІР°РЅРёСЏ:",  new Font(times,14)));
 		table.addCell(c1);
 		table.addCell(df2.format(x3 / 12));
-		c1 = new PdfPCell(new Phrase("полных лет",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("РїРѕР»РЅС‹С… Р»РµС‚",  new Font(times,14)));
 		table.addCell(c1);
  
-		c1 = new PdfPCell(new Phrase("Первый взнос:",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("РџРµСЂРІС‹Р№ РІР·РЅРѕСЃ:",  new Font(times,14)));
 		table.addCell(c1);
 		table.addCell(df2.format(x4));
-		c1 = new PdfPCell(new Phrase("рублей",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("СЂСѓР±Р»РµР№",  new Font(times,14)));
 		table.addCell(c1);
  
-		c1 = new PdfPCell(new Phrase("Ежемесячный платёж:",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("Р•Р¶РµРјРµСЃСЏС‡РЅС‹Р№ РїР»Р°С‚С‘Р¶:",  new Font(times,14)));
 		table.addCell(c1);
 		table.addCell(df2.format(x5));
-		c1 = new PdfPCell(new Phrase("рублей",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("СЂСѓР±Р»РµР№",  new Font(times,14)));
 		table.addCell(c1);
  
 		document.add(table);
