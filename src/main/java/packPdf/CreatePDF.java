@@ -51,7 +51,7 @@ public class CreatePDF {
  
 		DecimalFormat df2 = new DecimalFormat("###.##");
  
-		Paragraph mainPara = new Paragraph("Результаты:");
+		Paragraph mainPara = new Paragraph("Результаты:",  new Font(times,14));
 		mainPara.setAlignment(Paragraph.ALIGN_CENTER);
 		Paragraph para1 = new Paragraph("Стоимость недвижимости " + x1 + " рублей",  new Font(times,14));
 		para1.setAlignment(Paragraph.ALIGN_CENTER);
@@ -81,7 +81,7 @@ public class CreatePDF {
 		c1 = new PdfPCell(new Phrase(df2.format(x1),  new Font(times,14)));
 		table.addCell(c1);
  
-		c1 = new PdfPCell(new Phrase("Рублей",  new Font(times,14)));
+		c1 = new PdfPCell(new Phrase("рублей",  new Font(times,14)));
 		table.addCell(c1);
  
 		c1 = new PdfPCell(new Phrase("Процентная ставка:",  new Font(times,14)));
