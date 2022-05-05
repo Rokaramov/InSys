@@ -15,9 +15,10 @@ import javax.servlet.http.HttpServletResponse;
 public class Registration extends HttpServlet{
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setCharacterEncoding("UTF-8");
 		RequestRegistration Registration = RequestRegistration.fromRequestParameters(request);
 		Registration.setAsRequestAttributesAndPaste(request);
-		
+		response.setCharacterEncoding("UTF-8");
 		request.getRequestDispatcher("/Avtoriz.jsp").forward(request, response);
 	}
 	private static class RequestRegistration {
@@ -65,7 +66,8 @@ return new RequestRegistration(request.getParameter("loginReg"), request.getPara
 				request.setAttribute("pass", passwordJava);
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
-				request.setAttribute("log", "Р РµРіРёСЃС‚СЂР°С†РёСЏ РЅРµ СЃРѕРІРµСЂС€РµРЅР°");		}	
+				request.setAttribute("log", "Регистрация не совершена");		
+				}	
 		}
 	}
 }
