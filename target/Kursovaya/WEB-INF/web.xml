@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>WebProject</display-name>
+  <welcome-file-list>
+    <welcome-file>Avtoriz.jsp</welcome-file>
+  </welcome-file-list>
+<servlet>
+	<servlet-name>Calc</servlet-name>
+	<servlet-class>packCalc.Calc</servlet-class>
+</servlet>
+  <servlet-mapping>
+  <servlet-name>Calc</servlet-name>
+  <url-pattern>/Calc</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>Registration</servlet-name>
+	<servlet-class>packReg.Registration</servlet-class>
+</servlet>
+  <servlet-mapping>
+  <servlet-name>Registration</servlet-name>
+  <url-pattern>/Registration</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+	<servlet-name>Avtor</servlet-name>
+	<servlet-class>packAvt.Avtor</servlet-class>
+</servlet>
+  <servlet-mapping>
+  <servlet-name>Avtor</servlet-name>
+  <url-pattern>/Avtor</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+	<servlet-name>Writer</servlet-name>
+	<servlet-class>packCalc.PercentWriter</servlet-class>
+</servlet>
+  <servlet-mapping>
+  <servlet-name>Writer</servlet-name>
+  <url-pattern>/Writer</url-pattern>
+  </servlet-mapping>
+  
+       <servlet>
+	<servlet-name>Inf</servlet-name>
+	<servlet-class>packInf.Information</servlet-class>
+</servlet>
+  <servlet-mapping>
+  <servlet-name>Inf</servlet-name>
+  <url-pattern>/Inf</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

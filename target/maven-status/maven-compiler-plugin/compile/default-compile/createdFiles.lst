@@ -1,0 +1,14 @@
+packAvt/Avtor.class
+packInf/Information.class
+packCalc/Out.class
+packInf/Information$RequestAvtor.class
+packCalc/Abst.class
+packCalc/Calc$RequestCalc.class
+packCalc/PercentChange.class
+packCalc/PercentWriter$RequestRegistration.class
+packCalc/PercentWriter.class
+packReg/Registration$RequestRegistration.class
+packCalc/Calc.class
+packPdf/CreatePDF.class
+packReg/Registration.class
+packAvt/Avtor$RequestAvtor.class
