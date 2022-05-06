@@ -13,5 +13,5 @@ public abstract class Abst {
    	 c=third;
    	 d=fourth;
     }
-    abstract double calc();
+    public abstract double calc();
 }
