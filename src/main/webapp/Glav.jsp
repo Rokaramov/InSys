@@ -14,7 +14,7 @@
 		<H1 align="center">Добро пожаловать в ипотечный калькулятор!</H1>
 		<H1 align="center">Введите все необходимые данные и нажмите "рассчитать"</H1>
 			<label for="first">Введите стоимость недвижимости</label>
-			<input type="number" name="first" id="first" value="${first}">
+			<input type="number" name="first" id="first" value="${first}" required>
 			<label>Рублей</label>
 			<br>
 			<br>
@@ -30,7 +30,7 @@
 			<br>
 			<br>
 			<label for="third">Введите срок кредитования</label>
-			<input type="number" name="third" id="third" value="${third}">
+			<input type="number" name="third" id="third" value="${third}" required>
 			<label>Полных лет</label>
 			<br>
 			<br>
