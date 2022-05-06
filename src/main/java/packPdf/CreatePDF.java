@@ -51,7 +51,7 @@ public class CreatePDF {
  
 		DecimalFormat df2 = new DecimalFormat("###.##");
  
-		Paragraph mainPara = new Paragraph("a:");
+		Paragraph mainPara = new Paragraph("Peзyльтaт:",  new Font(times,14));
 		mainPara.setAlignment(Paragraph.ALIGN_CENTER);
 		Paragraph para1 = new Paragraph("b " + x1 + "c",  new Font(times,14));
 		para1.setAlignment(Paragraph.ALIGN_CENTER);
