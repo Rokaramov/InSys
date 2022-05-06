@@ -48,19 +48,19 @@ return new RequestRegistration(request.getParameter("loginReg"), request.getPara
 				
 				File file = new File("login1.TXT");
 				file.createNewFile();
-				FileWriter writer = new FileWriter(file, true);
+				FileWriter writer = new FileWriter(file, false);
 				writer.write(loginJava + "\n");
 				writer.close();
 				
 				File file2 = new File("password1.TXT");
 				file2.createNewFile();
-				FileWriter writerPassword = new FileWriter(file2, true);
+				FileWriter writerPassword = new FileWriter(file2, false);
 				writerPassword.write(passwordJava + "\n");
 				writerPassword.close();
 				
 				File file3 = new File("admin.TXT");
 				file3.createNewFile();
-				FileWriter writerAdmin = new FileWriter(file3, true);
+				FileWriter writerAdmin = new FileWriter(file3, false);
 				if (request.getParameter("gender").equals("admin")) {
 					writerAdmin.write("1" + "\n");
 					writerAdmin.close();

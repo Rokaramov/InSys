@@ -53,7 +53,7 @@ public class CreatePDF {
  
 		Paragraph mainPara = new Paragraph("Введённые данные и результат вычислений:",  new Font(times,14));
 		mainPara.setAlignment(Paragraph.ALIGN_CENTER);
-		Paragraph para1 = new Paragraph("Стоимость недвижимости " + df2.format(x1) + "рублей",  new Font(times,14));
+		Paragraph para1 = new Paragraph("Стоимость недвижимости " + df2.format(x1) + " рублей",  new Font(times,14));
 		para1.setAlignment(Paragraph.ALIGN_CENTER);
 		Paragraph para2 = new Paragraph("Процентная ставка " + df2.format(x2 * 100) + " процентов",  new Font(times,14));
 		para2.setAlignment(Paragraph.ALIGN_CENTER);
@@ -92,7 +92,7 @@ public class CreatePDF {
  
 		c1 = new PdfPCell(new Phrase("срок кредитования",  new Font(times,14)));
 		table.addCell(c1);
-		table.addCell(df2.format(x3 / 12));
+		table.addCell(df2.format(x3));
 		c1 = new PdfPCell(new Phrase("полных лет",  new Font(times,14)));
 		table.addCell(c1);
  
