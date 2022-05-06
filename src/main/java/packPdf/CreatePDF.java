@@ -57,7 +57,7 @@ public class CreatePDF {
 		para1.setAlignment(Paragraph.ALIGN_CENTER);
 		Paragraph para2 = new Paragraph("Процентная ставка " + df2.format(x2 * 100) + " процентов",  new Font(times,14));
 		para2.setAlignment(Paragraph.ALIGN_CENTER);
-		Paragraph para3 = new Paragraph("На " + df2.format(x3 / 12) + " полных лет",  new Font(times,14));
+		Paragraph para3 = new Paragraph("На " + df2.format(x3) + " полных лет",  new Font(times,14));
 		para3.setAlignment(Paragraph.ALIGN_CENTER);
 		Paragraph para4 = new Paragraph("С первым взносом " + df2.format(x4) + " рублей",  new Font(times,14));
 		para4.setAlignment(Paragraph.ALIGN_CENTER);
