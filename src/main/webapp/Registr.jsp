@@ -12,10 +12,10 @@
 <body>
  <h1>Регистрация</h1>
 	<form action="${pageContext.request.contextPath}/Registration" method="post">
-			<input type="text" name="loginReg" id="loginReg" placeholder="Логин" value="${loginReg}">
+			<input type="text" name="loginReg" id="loginReg" placeholder="Логин" value="${loginReg}" required>
 			<br>
 			<br>
-			<input type="password" name="passwordReg" id="passwordReg" placeholder="Пароль" value="${passwordReg}">
+			<input type="password" name="passwordReg" id="passwordReg" placeholder="Пароль" value="${passwordReg}" required>
 			<br>
 			<br>
 			<input type="radio" name="gender" value="user" checked />Обычный пользователь
