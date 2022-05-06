@@ -72,7 +72,7 @@ return new RequestRegistration(request.getParameter("loginReg"), request.getPara
 				request.setAttribute("pass", passwordJava);
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
-				request.setAttribute("log", "reg");		
+				request.setAttribute("log", "рег");		
 				}	
 		}
 	}
