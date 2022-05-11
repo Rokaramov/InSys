@@ -12,16 +12,16 @@
 <body>
 <div class="container wrapper">
       <form class="biba" action="${pageContext.request.contextPath}/Inf" method="post">
-			<label>Карамов Роман Владиславович</label>
+			<label>Карамов Роман Владиславович №ЗК 20210069</label>
 			<br>
 			<br>
-			<label>Исмагилова Виктория Рустамовна</label>
+			<label>Исмагилова Виктория Рустамовна №ЗК 20130499</label>
 			<br>
 			<br>
-			<label>Байков Богдан Эдуардович</label>
+			<label>Байков Богдан Эдуардович №ЗК 20210069</label>
 			<br>
 			<br>
-			<label>Пожидаев Александр Евгеньевич</label>
+			<label>Пожидаев Александр Евгеньевич №ЗК 20130720</label>
 			<br>
 			<br>
 			<input class="input"  type="submit" name="back" value="Назад">
