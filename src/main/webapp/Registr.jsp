@@ -10,22 +10,29 @@
 
 </head>
 <body>
+<div class="container wrapper">
  <h1>Регистрация</h1>
-	<form action="${pageContext.request.contextPath}/Registration" method="post">
-			<input type="text" name="loginReg" id="loginReg" placeholder="Логин" value="${loginReg}" required>
+	<form class="biba" action="${pageContext.request.contextPath}/Registration" method="post">
+			<input class="input" type="text" name="loginReg" id="loginReg" placeholder="Логин" value="${loginReg}" required>
 			<br>
 			<br>
-			<input type="password" name="passwordReg" id="passwordReg" placeholder="Пароль" value="${passwordReg}" required>
+			<input class="input"  type="password" name="passwordReg" id="passwordReg" placeholder="Пароль" value="${passwordReg}" required>
 			<br>
 			<br>
-			<input type="radio" name="gender" value="user" checked />Обычный пользователь
-    		<input type="radio" name="gender" value="admin" />Администратор
+			<input class="radio" class="input"  type="radio" name="gender" value="user" checked />Пользователь
 			<br>
 			<br>
-			<input type="submit" name="signup" value="Зарегистрироваться">
+    		<input class="radio"  type="radio" name="gender" value="admin" />Администратор
+			<br>
+			<br>
+			<input class="input"  type="submit" name="signup" value="Зарегистрироваться">
 		  </form>
-	<br>	
-<form action="${pageContext.request.contextPath}/Avtoriz.jsp" method="post">		
-<input type="submit" name="signup" value="Авторизация">
+	
+	<br>
+<form class="biba" action="${pageContext.request.contextPath}/Avtoriz.jsp" method="post">		
+<input class="input"  type="submit" name="signup" value="Авторизация">
 </form>
+<br>
+	</div>	
+	<br>
 </body>

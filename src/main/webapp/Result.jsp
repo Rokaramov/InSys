@@ -10,6 +10,7 @@
 
 </head>
 <body>
+<div class="container wrapper">
 <p><strong>Результат вычислений</strong></p>
 <br><br>
 <p><strong>Сумма ежемесячного платежа составит:</strong> ${result}</p>
@@ -21,8 +22,9 @@
 <p><strong>Введённый срок кредитования:</strong> ${result4}</p>
 <p><strong>Введённый первоначальный взнос:</strong> ${result5}</p>
 
-<form action="${pageContext.request.contextPath}/Glav.jsp" method="post">
-			<input type="submit" name="sign" value="Назад">	
+<form class="biba"  action="${pageContext.request.contextPath}/Glav.jsp" method="post">
+			<input class="input"  type="submit" name="sign" value="Назад">	
 	</form>
+	</div>
 </body>
 </html>

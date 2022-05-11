@@ -10,7 +10,8 @@
 
 </head>
 <body>
-      <form action="${pageContext.request.contextPath}/Inf" method="post">
+<div class="container wrapper">
+      <form class="biba" action="${pageContext.request.contextPath}/Inf" method="post">
 			<label>Карамов Роман Владиславович</label>
 			<br>
 			<br>
@@ -23,8 +24,8 @@
 			<label>Пожидаев Александр Евгеньевич</label>
 			<br>
 			<br>
-			<input type="submit" name="back" value="Назад">
+			<input class="input"  type="submit" name="back" value="Назад">
 		  </form>
-		
+		</div>
 </body>
 </html>

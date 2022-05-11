@@ -3,26 +3,56 @@ body {
 		background: #fff;
 		font-family: 'Roboto Medium', sans-serif;
 		position: relative;
-        top: 50px;
-        left: 525px;
+		font-size: 17px;
+		padding: 0;
+		margin: 0;
 		
 }
 
+.biba{
+	max-width: 800px;
+	margin:3px auto;
+	font-size: 24px;
+	}
+
 h1 {
   color: #a52a2a; 
-  font-size: 26pt;
+  font-size: 36pt;
   font-family: Georgia, Times, serif; 
   font-weight: normal; 
-  text-align: justify; 
+  text-align: center;
+}
+div {
+	box-sizing: border-box;
+}	
+
+.input {
+  font-size: 15px;
+  width: 220px;
+  margin:3px auto;
+  height: 30px;
 }
 
-input[name="sign"] {	
+.container {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.wrapper{
+	margin: 25px auto;
+	font-size: 24px;
+	max-width: 1000px;
+	border: solid 1px #000;
+	border-radius: 3px;
+	box-shadow: 4px 4px 5px rgba(0,0,0,0.3);
+	}
+
+input[type="submit"] {	
   position: relative;
-  top: 15px;
-  left: 275px;
   color: #fff; 
-  width: 180px;
-  height: 40px;
+  width: 800px;
+  font-size: 25px;
+  height: 80px;
   user-select: none; 
   background: #a52a2a;
   padding: .7em 1.5em; 
