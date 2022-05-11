@@ -19,10 +19,10 @@
 			<input class="input"  type="password" name="passwordReg" id="passwordReg" placeholder="Пароль" value="${passwordReg}" required>
 			<br>
 			<br>
-			<input class="radio" class="input"  type="radio" name="gender" value="user" checked />Пользователь
+			<input class="radio" class="input"  type="radio" name="gender" value="user" checked />Обычный пользователь
 			<br>
 			<br>
-    		<input class="radio"  type="radio" name="gender" value="admin" />Администратор
+    			<input class="radio"  type="radio" name="gender" value="admin" />Администратор
 			<br>
 			<br>
 			<input class="input"  type="submit" name="signup" value="Зарегистрироваться">
