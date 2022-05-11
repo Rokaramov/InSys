@@ -15,10 +15,10 @@
 <div class="container wrapper">
  <h1>Авторизация</h1>
           <form class="biba" action="${pageContext.request.contextPath}/Avtor" method="post">
-			<input class="input" type="text" name="log" id="log" placeholder="Логин" value="${log}">
+			<input class="input" type="text" name="log" id="log" placeholder="Логин" value="${log}" required>
 			<br>
 			<br>
-			<input class="input"  type="password" name="pass" id="pass" placeholder="Пароль" value="${pass}">
+			<input class="input"  type="password" name="pass" id="pass" placeholder="Пароль" value="${pass}" required>
 			<br>
 			<br>
 			<input class="input" type="submit" name="signin" value="Войти">
