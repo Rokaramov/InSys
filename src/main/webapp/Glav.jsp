@@ -62,6 +62,33 @@
 	<br>
 	<a href="/Kursovaya/Team10.pdf"> Открыть PDF-файл</a>
 		</div>
-			</section>
+		</section>
+			<script type="text/javascript">
+			
+			let reg = /[A-Za-zА-Яа-яЁё]/g;
+			let regSymbols = /[^\d]/g;
+			
+			let first = document.querySelector('#first');
+			
+			first.oninput = function(){
+				this.value = this.value.replace(reg, '');
+				this.value = this.value.replace(regSymbols, '');
+				this.value = this.value.substr(0,8);
+			}
+			let third = document.querySelector('#third');
+			
+			third.oninput = function(){
+				this.value = this.value.replace(reg, '');
+				this.value = this.value.replace(regSymbols, '');
+				this.value = this.value.substr(0,2);
+			}
+			let fourth = document.querySelector('#fourth');
+			
+			fourth.oninput = function(){
+				this.value = this.value.replace(reg, '');
+				this.value = this.value.replace(regSymbols, '');
+				this.value = this.value.substr(0,8);
+			}
+			</script>
 </body>
 </html>

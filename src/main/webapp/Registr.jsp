@@ -10,6 +10,7 @@
 
 </head>
 <body>
+<section>
 <div class="container wrapper">
  <h1>Регистрация</h1>
 	<form class="biba" action="${pageContext.request.contextPath}/Registration" method="post">
@@ -27,12 +28,29 @@
 			<br>
 			<input class="input"  type="submit" name="signup" value="Зарегистрироваться">
 		  </form>
-	
 	<br>
 <form class="biba" action="${pageContext.request.contextPath}/Avtoriz.jsp" method="post">		
 <input class="input"  type="submit" name="signup" value="Авторизация">
 </form>
 <br>
 	</div>	
-	<br>
+	</section>
+			<script type="text/javascript">
+			
+			let reg = /[А-Яа-яЁё]/g;
+			
+			let loginReg = document.querySelector('#loginReg');
+			
+			loginReg.oninput = function(){
+				this.value = this.value.replace(reg, '');
+				this.value = this.value.substr(0,20);
+			}
+			let passwordReg = document.querySelector('#passwordReg');
+			
+			passwordReg.oninput = function(){
+				this.value = this.value.replace(reg, '');
+				this.value = this.value.substr(0,20);
+			}			
+			</script>
 </body>
+</html>

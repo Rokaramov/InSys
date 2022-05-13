@@ -31,5 +31,22 @@
 			<br>
 			</div>
 			</section>
+			<script type="text/javascript">
+			
+			let reg = /[А-Яа-яЁё]/g;
+			
+			let log = document.querySelector('#log');
+			
+			log.oninput = function(){
+				this.value = this.value.replace(reg, '');
+				this.value = this.value.substr(0,20);
+			}
+			let pass = document.querySelector('#pass');
+			
+			pass.oninput = function(){
+				this.value = this.value.replace(reg, '');
+				this.value = this.value.substr(0,20);
+			}			
+			</script>
 </body>
 </html>
