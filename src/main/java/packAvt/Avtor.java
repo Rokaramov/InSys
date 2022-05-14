@@ -87,6 +87,7 @@ return new RequestAvtor(request.getParameter("log"), request.getParameter("pass"
 											 }			
 					if(!che) {
 						request.setAttribute("log", "Неправильный логин или пароль");
+						request.setAttribute("pass", "");
 						request.getRequestDispatcher("/Avtoriz.jsp").forward(request, response);
 					}
 	}
