@@ -1,7 +1,6 @@
 package packAvt;
 
 import java.io.FileReader;
-
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.text.DecimalFormat;
@@ -25,9 +24,7 @@ public class Avtor extends HttpServlet{
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
-		
+		}	
 		
 	}
 	private static class RequestAvtor {
@@ -89,6 +86,7 @@ return new RequestAvtor(request.getParameter("log"), request.getParameter("pass"
 						e1.printStackTrace();
 											 }			
 					if(!che) {
+						request.setAttribute("log", "Неправильный логин или пароль");
 						request.getRequestDispatcher("/Avtoriz.jsp").forward(request, response);
 					}
 	}
